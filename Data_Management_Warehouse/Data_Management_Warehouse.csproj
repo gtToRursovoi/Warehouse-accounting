@@ -10,4 +10,8 @@
     <Folder Include="PageViewModel\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj" />
+  </ItemGroup>
+
 </Project>

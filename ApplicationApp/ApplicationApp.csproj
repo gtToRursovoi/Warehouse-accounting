@@ -9,8 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Data_Management_Warehouse\Data_Management_Warehouse.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="View\Page\" />
-    <Folder Include="View\Window\" />
   </ItemGroup>
 
 </Project>

@@ -16,6 +16,7 @@ namespace Database.Context
         public DbSet<Sales> Sales { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<WarehouseProduct> WarehouseProducts { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public SqlServerDbContext()
         {
@@ -24,10 +25,9 @@ namespace Database.Context
                     
         }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=WarehouseDb;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=WarehouseAccautingDb;");
         }
     }
 }

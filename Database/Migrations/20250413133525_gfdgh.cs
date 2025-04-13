@@ -5,7 +5,7 @@
 namespace Database.Migrations
 {
     /// <inheritdoc />
-    public partial class newDb : Migration
+    public partial class gfdgh : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
