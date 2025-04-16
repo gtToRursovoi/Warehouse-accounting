@@ -46,5 +46,10 @@ namespace ApplicationApp.View.Page
         {
             this.Close(); // Закрываем окно
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel_CloseRegistrationWindow();
+        }
     }
 }

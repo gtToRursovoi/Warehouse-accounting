@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:ApplicationApp"
              StartupUri="View\Windows\LoginViewWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets\Style\StyleComponent.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

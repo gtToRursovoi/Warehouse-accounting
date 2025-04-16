@@ -1,4 +1,5 @@
-﻿using Data_Management_Warehouse.ViewModel;
+﻿using ApplicationApp.View.Page;
+using Data_Management_Warehouse.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,6 @@ namespace ApplicationApp.View.Windows
             var viewModel = new LoginViewModel();
             viewModel.OnError += ViewModel_OnError;
             viewModel.OnSuccess += ViewModel_OnSuccess;
-            viewModel.CloseLoginWindow += ViewModel_CloseLoginWindow;
             this.DataContext = viewModel;
         }
         private void ViewModel_OnError(string errorMessage)
@@ -42,8 +42,17 @@ namespace ApplicationApp.View.Windows
             this.Close();
         }
 
-        private void ViewModel_CloseLoginWindow()
+      
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+           App.Current.Shutdown();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            RegistrationViewWindow registrationViewWindow = new RegistrationViewWindow();
+            registrationViewWindow.Show();
             this.Close();
         }
     }

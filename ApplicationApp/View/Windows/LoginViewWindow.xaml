@@ -5,15 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ApplicationApp.View.Windows"
         mc:Ignorable="d"
-        Title="LoginViewWindow" Height="450" Width="800">
+        Title="LoginViewWindow" Height="540" Width="400" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="#F1EFE9"
+        >
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Войти"/>
-            <TextBlock Text="Login"/>
-            <TextBox Text="{Binding Login}"/>
-            <TextBlock Text="Password"/>
-            <TextBox Text="{Binding Password}"/>
-            <Button Content="Login in" Command="{Binding LoginCommand}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" VerticalAlignment="Top">
+            <Button Content="❌" Background="#AF2B1E" Width="50" Height="50" HorizontalAlignment="Right" Margin="0,10,10,0" Click="Button_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+            <TextBlock Text="Войти" HorizontalAlignment="Center" FontSize="20"/>
+            <TextBlock Text="Login" Margin="3,0,0,4" FontSize="16"/>
+            <TextBox Text="{Binding Login}" Margin="0,0,0,18" Background="#E6F0F5" Width="170"/>
+            <TextBlock Text="Password" Margin="3,0,0,4" FontSize="16"/>
+            <TextBox Text="{Binding Password}" Margin="0,0,0,18" Width="170"/>
+            <Button Content="Login in" Command="{Binding LoginCommand}" Margin="10" Background="#6BAED6"/>
+            <Button Content="Registration" Click="Button_Click_1"/>
         </StackPanel>
     </Grid>
 </Window>

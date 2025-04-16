@@ -9,11 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Image\Z.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Data_Management_Warehouse\Data_Management_Warehouse.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="View\Page\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Image\Z.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
