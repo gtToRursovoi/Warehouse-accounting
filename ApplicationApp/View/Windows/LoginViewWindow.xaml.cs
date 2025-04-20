@@ -1,5 +1,4 @@
-﻿using ApplicationApp.View.Page;
-using Data_Management_Warehouse.ViewModel;
+﻿using Data_Management_Warehouse.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

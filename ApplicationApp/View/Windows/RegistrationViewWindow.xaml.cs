@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ApplicationApp.View.Page
+namespace ApplicationApp.View.Windows
 {
     /// <summary>
     /// Логика взаимодействия для RegistrationViewWindow.xaml
@@ -22,13 +22,13 @@ namespace ApplicationApp.View.Page
     {
         public RegistrationViewWindow()
         {
-            RegisterViewModel registerViewModel = new RegisterViewModel();  
+            RegisterViewModel registerViewModel = new RegisterViewModel();
             InitializeComponent();
             this.DataContext = registerViewModel;
 
             registerViewModel.OnError += ViewModel_OnError;
             registerViewModel.OnSuccess += ViewModel_OnSuccess;
-            
+
         }
         private void ViewModel_OnError(string errorMessage)
         {

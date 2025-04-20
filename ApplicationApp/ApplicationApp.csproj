@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\Page\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Assets\Image\Z.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
