@@ -22,6 +22,7 @@
                 <DataTemplate>
                     <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="5">
                         <StackPanel>
+                            <TextBlock Text="{Binding Id}"/>
                             <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14"/>
                             <TextBlock Text="ИНН:" FontWeight="SemiBold"/>
                             <TextBlock Text="{Binding INN}"/>

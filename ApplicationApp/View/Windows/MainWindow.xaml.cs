@@ -27,5 +27,10 @@ namespace ApplicationApp
             MainFrame.Navigate(new PageAgents(MainFrame));
            
         }
+
+        private void Open_Material(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate (new PageMaterial(MainFrame));
+        }
     }
 }
