@@ -32,5 +32,10 @@ namespace ApplicationApp
         {
             MainFrame.Navigate (new PageMaterial(MainFrame));
         }
+
+        private void Open_Warehause(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PageWarehouses(MainFrame));
+        }
     }
 }
