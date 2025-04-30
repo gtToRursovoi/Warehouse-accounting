@@ -47,5 +47,10 @@ namespace ApplicationApp
         {
             MainFrame.Navigate(new PageWarehouseProducts(MainFrame));
         }
+
+        private void Open_Sales(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PageSales(MainFrame));
+        }
     }
 }

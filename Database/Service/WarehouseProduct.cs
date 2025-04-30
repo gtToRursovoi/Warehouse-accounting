@@ -16,5 +16,10 @@ namespace Database.Service
         public long CountProduct { get; set; }
 
         public virtual ICollection<Sales>? Sales { get; set; }
+        public override string ToString()
+        {
+            return Product != null ? Product.Name : "Без названия";
+        }
+
     }
 }
