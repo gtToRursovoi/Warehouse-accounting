@@ -1,5 +1,6 @@
 ﻿using ApplicationApp.Assets.Image;
 using Data_Management_Warehouse.PageViewModel;
+using Database.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,28 +19,24 @@ using System.Windows.Shapes;
 namespace ApplicationApp.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageProducts.xaml
+    /// Логика взаимодействия для PageProductsWriteEdit.xaml
     /// </summary>
-    public partial class PageProducts : Page
+    public partial class PageProductsWriteEdit : Page
     {
         Frame MainFrame;
         ProductsViewModel viewModel;
-        public PageProducts(Frame mainFrame)
+        public PageProductsWriteEdit(Frame frame,Product productToEdit = null)
         {
             InitializeComponent();
-            MainFrame = mainFrame;
-             viewModel = new ProductsViewModel(new FileDialogService(),null);
+            MainFrame = frame;
+            viewModel = new ProductsViewModel(new FileDialogService(),productToEdit);
+            viewModel.ShowMessage += msg => MessageBox.Show(msg);
             this.DataContext = viewModel;
         }
 
-        private void OpenAddPage(object sender, RoutedEventArgs e)
+        private void Exit(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new PageProductsWriteEdit(MainFrame));
-        }
-
-        private void EtitOpenPage(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new PageProductsWriteEdit(MainFrame, viewModel.SelectedProduct));
+            MainFrame.Navigate(new PageProducts(MainFrame));
         }
     }
 }

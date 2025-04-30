@@ -1,6 +1,4 @@
-﻿using ApplicationApp.Assets.Image;
-using Data_Management_Warehouse.PageViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,28 +16,31 @@ using System.Windows.Shapes;
 namespace ApplicationApp.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageProducts.xaml
+    /// Логика взаимодействия для PageWarehouseProducts.xaml
     /// </summary>
-    public partial class PageProducts : Page
+    public partial class PageWarehouseProducts : Page
     {
         Frame MainFrame;
-        ProductsViewModel viewModel;
-        public PageProducts(Frame mainFrame)
+        WarehouseProductViewModel ViewModel;
+        public PageWarehouseProducts(Frame mainFrame)
         {
             InitializeComponent();
             MainFrame = mainFrame;
-             viewModel = new ProductsViewModel(new FileDialogService(),null);
-            this.DataContext = viewModel;
+            ViewModel = new WarehouseProductViewModel();
+            this.DataContext = ViewModel;
+            ViewModel.ShowMessage += msg => MessageBox.Show(msg);
         }
+
+        
 
         private void OpenAddPage(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new PageProductsWriteEdit(MainFrame));
+            MainFrame.Navigate(new PageWarehouseProductsWrite(MainFrame));
         }
 
         private void EtitOpenPage(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new PageProductsWriteEdit(MainFrame, viewModel.SelectedProduct));
+            MainFrame.Navigate(new PageWarehouseProductsWrite(MainFrame,ViewModel.SelectedWarehouseProduct));
         }
     }
 }
