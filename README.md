@@ -20,7 +20,7 @@
 - Установленные следующие NuGet пакеты:
   - `System.Data.SqlClient`
   - `Microsoft.EntityFrameworkCore.SqlServer` (если используется Entity Framework)
-  - и другие зависимости, указанные в `packages.config` или `NuGet`.
+
 
 ## Установка
 
