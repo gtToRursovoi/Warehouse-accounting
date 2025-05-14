@@ -31,7 +31,11 @@
 
                             <!-- Информация о продукте -->
                             <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+
+                              
                                 <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" />
+                                <TextBlock Text="ID:" FontWeight="SemiBold" />
+                                <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="16" />
                                 <TextBlock Text="Артикул:" FontWeight="SemiBold" />
                                 <TextBlock Text="{Binding Articul}" />
                                 <TextBlock Text="Минимальная цена:" FontWeight="SemiBold" />
