@@ -1,4 +1,5 @@
 ﻿using ApplicationApp.View.Pages;
+using ApplicationApp.View.Windows;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -51,6 +52,13 @@ namespace ApplicationApp
         private void Open_Sales(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new PageSales(MainFrame));
+        }
+
+        private void Ext_Click(object sender, RoutedEventArgs e)
+        {
+            LoginViewWindow loginViewWindow = new LoginViewWindow();
+            loginViewWindow.Show();
+            this.Close();
         }
     }
 }
